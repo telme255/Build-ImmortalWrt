@@ -19,4 +19,4 @@ sed -i 's/\/bin\/ash/\/bin\/bash/' package/base-files/files/etc/passwd
 # Partition alignment
 #sed -i 's/256/4096/g' target/linux/x86/image/Makefile
 # 修改默认 Rootfs 分区大小为 768MB (可根据需要调整)
-#sed -i 's/CONFIG_TARGET_ROOTFS_PARTSIZE=.*$/CONFIG_TARGET_ROOTFS_PARTSIZE=768/g' .config
+echo 'CONFIG_TARGET_ROOTFS_PARTSIZE=768' >> .config
