@@ -142,7 +142,7 @@ jobs:
         sudo chmod +x openwrt/files/usr/bin/easyupdate.sh
 
     - name: SSH connection to Actions
-      uses: lhotari/action-upterm@main
+      uses: P3TERX/ssh2actions@main
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
 
     - name: Download package
